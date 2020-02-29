@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0-preview1</Version>
+    <RuntimeIdentifiers>osx-x64;linux-x64;win-x64</RuntimeIdentifiers>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Condition=" 'true' == 'true' " Include="runtimes/osx-x64/native/libsyntect.dylib" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Pack="true" PackagePath="runtimes/osx-x64/native/libsyntect.dylib"/>
+    <None Condition=" 'false' == 'true' " Include="runtimes/linux-x64/native/libsyntect.so" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Pack="true" PackagePath="runtimes/linux-x64/native/libsyntect.so"/>
+    <None Condition=" 'false' == 'true' " Include="runtimes/win-x64/native/syntect.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Pack="true" PackagePath="runtimes/win-x64/native/syntect.dll"/>
+  </ItemGroup>
+
+</Project>

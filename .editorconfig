@@ -1,0 +1,33 @@
+# vi: set ft=ini :
+
+# This file helps unify code style.
+#
+# Plugins are available for
+# notepad++, emacs, vim, gedit,
+# textmate, visual studio, and more.
+#
+# See https://editorconfig.org for details.
+
+# This file is at the root of the git repo.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*.cs]
+indent_style = space
+indent_size = 4
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.sln]
+end_of_line = crlf
+insert_final_newline = false
+
+[*.{csproj, targets}]
+indent_style = space
+indent_size = 2
